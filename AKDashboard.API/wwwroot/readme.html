@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>README - Sistema Climatológico</title>
+    <link rel="stylesheet" href="css/readmeStyles.css">
+</head>
+<body>
+    <h1>README - Sistema Climatológico Web</h1>
+
+    <h2>✨ Visão Geral</h2>
+    <p>Este sistema exibe dados climatológicos das capitais brasileiras, com atualização automática e visualização gráfica. Desenvolvido para um teste técnico da Almeida Krüger.</p>
+
+    <h2>⚖️ Tecnologias</h2>
+    <ul>
+        <li>Backend: .NET 8 (C#)</li>
+        <li>Frontend: HTML5 + CSS3 + JS (puro)</li>
+        <li>Gráficos: Chart.js</li>
+        <li>Banco de dados: Em memória</li>
+    </ul>
+
+    <h2>⚡ Funcionalidades</h2>
+    <ul>
+        <li>Busca por cidade</li>
+        <li>Atualização automática a cada 15 minutos</li>
+        <li>Exibição de média, mínima, máxima, umidade e data</li>
+        <li>Gráficos dinâmicos (temperatura e umidade)</li>
+    </ul>
+
+    <h2>🚀 Deploy</h2>
+    <ol>
+        <li>Clone o repositório:</li>
+        <pre><code>git clone https://github.com/seu-usuario/clima-ak.git</code></pre>
+
+        <li>Rode o projeto:</li>
+        <pre><code>cd ClimaAk
+ cd backend
+ dotnet run</code></pre>
+
+        <li>Acesse no navegador:</li>
+        <pre><code>https://localhost:7201</code></pre>
+    </ol>
+
+    <h2>📊 Endpoints</h2>
+    <ul>
+        <li><code>GET /api/clima/{cidade}</code>: Retorna os dados atuais da cidade</li>
+        <li><code>GET /api/clima/historico</code>: Retorna o histórico de clima</li>
+    </ul>
+
+    <h2>💡 Observações</h2>
+    <p>Este projeto tem fins demonstrativos e pode ser expandido com integração a bancos externos (ex: OpenWeatherMap).</p>
+
+    <p><a href="home.html">⬅️ Voltar para Home</a></p>
+</body>
+</html>

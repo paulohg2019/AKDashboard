@@ -1,0 +1,6 @@
+@AKDashboard.API_HostAddress = http://localhost:7201
+
+GET {{AKDashboard.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

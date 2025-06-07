@@ -1,0 +1,36 @@
+﻿
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #f9fbfd;
+    color: #333;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #004a99;
+}
+
+code {
+    background-color: #eef3f8;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+pre {
+    background-color: #eef3f8;
+    padding: 10px;
+    border-radius: 8px;
+    overflow-x: auto;
+}
+
+a {
+    color: #0077cc;
+    text-decoration: none;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+

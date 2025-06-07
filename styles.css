@@ -1,0 +1,147 @@
+﻿/* Fonte geral */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    background-color: #f4f6f8;
+    color: #1e1e1e;
+    line-height: 1.6;
+    display: flex; /* Adicionado para o layout flexbox */
+    flex-direction: column; /* Adicionado para o layout flexbox */
+    min-height: 100vh; /* Garante que o body ocupe a altura total da viewport */
+}
+
+/* Cabeçalho */
+header {
+    background-color: #004a99; /* Cor azul do topo */
+    color: white;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+    header h1 {
+        margin-bottom: 10px;
+        font-size: 2rem;
+    }
+
+.cidade-input {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
+    .cidade-input select,
+    .cidade-input button {
+        padding: 10px;
+        font-size: 1rem;
+        border: none;
+        border-radius: 8px;
+        outline: none;
+    }
+
+    .cidade-input select {
+        background-color: #ffffff;
+        color: #004a99;
+        border: 1px solid #ccc;
+    }
+
+    .cidade-input button {
+        background-color: #0077cc;
+        color: white;
+        cursor: pointer;
+        transition: background-color 0.2s;
+    }
+
+        .cidade-input button:hover {
+            background-color: #005fa3;
+        }
+
+/* Layout principal */
+main {
+    flex-grow: 1; /* Faz o main ocupar o espaço restante, empurrando o footer para baixo */
+    padding: 20px;
+    display: grid;
+    gap: 20px;
+    grid-template-columns: 1fr;
+    max-width: 1000px;
+    margin: auto;
+}
+
+/* Cards */
+.card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    transition: transform 0.2s ease;
+}
+
+    .card:hover {
+        transform: translateY(-3px);
+    }
+
+#estatisticas-conteudo p {
+    margin: 0.5rem 0;
+    font-size: 1rem;
+}
+
+/* Gráficos */
+canvas {
+    width: 100% !important;
+    height: auto !important;
+    background-color: white;
+    border-radius: 8px;
+    padding: 10px;
+}
+
+/* Responsivo */
+@media (min-width: 768px) {
+    main {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card:first-child {
+        grid-column: span 2;
+    }
+}
+
+/* NOVO: Estilos para o Rodapé (footer) */
+footer {
+    background-color: #004a99; /* Mesma cor azul do header */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    margin-top: auto; /* Empurra o footer para a parte inferior */
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1); /* Sombra na parte superior do footer */
+}
+
+/* NOVO: Container para centralizar o botão no footer */
+.button-container {
+    display: flex;
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente (se houver altura) */
+    width: 100%;
+}
+
+/* NOVO: Estilos para o link de Documentação */
+.button-document {
+    display: inline-flex; /* Para alinhar o ícone e o texto */
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #0077cc; /* Cor do botão, pode ser a mesma do botão de busca */
+    color: white;
+    text-decoration: none;
+    border-radius: 8px; /* Mantém o padrão de border-radius dos outros elementos */
+    font-size: 1.1rem;
+    transition: background-color 0.2s; /* Transição suave para hover */
+}
+
+    .button-document:hover {
+        background-color: #005fa3; /* Mesma cor de hover do botão de busca */
+    }
+
+    .button-document i {
+        margin-right: 8px; /* Espaçamento entre o ícone e o texto */
+    }

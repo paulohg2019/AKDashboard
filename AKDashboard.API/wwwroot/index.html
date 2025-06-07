@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard Climatológico</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>Dashboard Climatológico</h1>
+        <div class="cidade-input">
+            <label for="cidade">Escolha uma capital:</label>
+            <select id="cidade">
+                <option value="Curitiba">Curitiba</option>
+                <option value="São Paulo">São Paulo</option>
+                <option value="Rio de Janeiro">Rio de Janeiro</option>
+                <option value="Belo Horizonte">Belo Horizonte</option>
+            </select>
+            <button onclick="buscarClima()">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <section id="estatisticas" class="card">
+            <h2>Estatísticas de Hoje</h2>
+            <div id="estatisticas-conteudo">
+                <p><strong>Cidade:</strong> Carregando...</p>
+                <p><strong>Temperatura:</strong> Carregando...</p>
+                <p><strong>Mín:</strong> Carregando...</p>
+                <p><strong>Max:</strong> Carregando...</p>
+                <p><strong>Umidade:</strong> Carregando...</p>
+                <p><strong>Data:</strong> Carregando...</p>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2>Gráfico de Temperaturas</h2>
+            <canvas id="graficoTemp"></canvas>
+        </section>
+
+        <section class="card">
+            <h2>Gráfico de Umidade</h2>
+            <canvas id="graficoUmidade"></canvas>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="js/script.js"></script>
+
+    <footer>
+        <div class="button-container">
+            <a href="home.html" class="button-document">
+                <i class="fas fa-file-alt"></i> Documentação
+            </a>
+        </div>
+    </footer>
+</body>
+</html>

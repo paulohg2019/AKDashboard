@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diagramas de Arquitetura - Sistema Climatológico</title>
+    <link rel="stylesheet" href="diagramaStyles.css">
+</head>
+<body>
+    <h1>Diagramas de Arquitetura</h1>
+
+    <h2>1. Diagrama de Arquitetura Lógica</h2>
+    <p>
+        O <strong>Diagrama de Arquitetura Lógica</strong> apresenta os principais componentes do sistema e como eles se comunicam de forma abstrata.
+        Ele mostra o fluxo dos dados:
+    </p>
+    <ul>
+        <li>Uma <strong>API externa de Clima</strong> fornece dados meteorológicos.</li>
+        <li>O backend, desenvolvido em <strong>.NET 8</strong>, consome esses dados e atualiza as informações a cada 15 minutos.</li>
+        <li>O <strong>Frontend</strong> (HTML + CSS + JS) exibe essas informações de forma gráfica e interativa ao usuário final, com uso de gráficos via Chart.js.</li>
+    </ul>
+
+    <h2>2. Diagrama de Arquitetura Física</h2>
+    <p>
+        O <strong>Diagrama de Arquitetura Física</strong> descreve como os componentes estão distribuídos fisicamente na infraestrutura do sistema:
+    </p>
+    <ul>
+        <li>A aplicação recebe dados via <strong>HTTP</strong> de uma API externa (simulada ou real).</li>
+        <li>O <strong>Backend .NET</strong> processa essas informações e armazena em um <strong>banco de dados em memória</strong>.</li>
+        <li>O <strong>Frontend</strong> acessa o backend para recuperar os dados processados e exibi-los ao usuário.</li>
+        <li>Todo o fluxo pode ser executado localmente, mas pode ser facilmente migrado para servidores em nuvem, se necessário.</li>
+    </ul>
+
+    <h3>🖼️ Visualização</h3>
+    <img src="diagrama_arquitetura.jpg" alt="Diagramas de Arquitetura Lógica e Física" style="max-width: 100%; border-radius: 8px;" />
+
+    <p><a href="home.html">⬅️ Voltar para a Página Inicial</a></p>
+</body>
+</html>
